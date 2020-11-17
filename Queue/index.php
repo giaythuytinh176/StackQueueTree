@@ -12,8 +12,13 @@ $queue->enqueue("End");
 
 print("<pre>" . print_r($queue, true) . "</pre>");
 
-while (!$queue->isEmpty()) {
-    echo $queue->dequeue() . "\n";
-}
+echo $queue->dequeue() . "\n";
+echo $queue->dequeue() . "\n";
+echo $queue->dequeue() . "\n";
+echo $queue->dequeue() . "\n";
+echo $queue->dequeue() . "\n";
+echo $queue->dequeue() . "\n";
 
-//print("<pre>" . print_r($queue, true) . "</pre>");
+var_dump($queue->isEmpty());
+
+print("<pre>" . print_r($queue, true) . "</pre>");
