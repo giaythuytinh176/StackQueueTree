@@ -12,27 +12,27 @@ $arr = [];
 for ($i = 0; $i < strlen($str); $i++) {
     $arr[] = $str[$i];
 }
-$split_str = str_replace(" ", "", $arr);
-//$split_str = str_split(str_replace(" ", "", $str), 1);
 
-
-foreach ($split_str as $value) {
+foreach ($arr as $value) {
     $stack->push($value);
     $queue->enqueue($value);
 }
 
+$cp1 = $stack->getStack();
 
-$isDoiXung = false;
-$i = 0;
+$cp2 = [];
 while (!$queue->isEmpty()) {
-    $current = $queue;
-    $next = $current->getFont();
-    $value = $current->getFont()->value;
-    if ($value == $stack->getStack()[$i]) {
-        $isDoiXung = true;
-        $current = $next;
-    }
-    $i++;
+    $cp2[] = $queue->dequeue();
 }
-print("<pre>" . print_r(var_dump($isDoiXung), true) . "</pre>");die();
+
+if ($cp1 == $cp2) {
+    echo "Chuoi doi xung";
+}
+else echo "Chuoi ko doi xung";
+
+
+
+print("<pre>" . print_r($cp1, true) . "</pre>");
+print("<pre>" . print_r($cp2, true) . "</pre>");die();
+
 
