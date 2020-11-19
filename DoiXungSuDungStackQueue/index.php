@@ -7,7 +7,7 @@ $stack = new ReadingList(100);
 $queue = new Queue();
 
 
-$str = "able was I 1re I saw elba";
+$str = "able was I ere I saw elba";
 $arr = [];
 for ($i = 0; $i < strlen($str); $i++) {
     $arr[] = $str[$i];
